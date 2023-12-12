@@ -14,6 +14,11 @@
 		8947952E2B27C2E800ECA010 /* BudsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8947952D2B27C2E800ECA010 /* BudsTests.swift */; };
 		894795382B27C2E800ECA010 /* BudsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894795372B27C2E800ECA010 /* BudsUITests.swift */; };
 		8947953A2B27C2E800ECA010 /* BudsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894795392B27C2E800ECA010 /* BudsUITestsLaunchTests.swift */; };
+		8947954F2B27E36F00ECA010 /* Muli-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8947954B2B27DDD900ECA010 /* Muli-Light.ttf */; };
+		894795502B27E36F00ECA010 /* Muli-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8947954C2B27DDD900ECA010 /* Muli-Bold.ttf */; };
+		894795512B27E36F00ECA010 /* Muli-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8947954E2B27DDD900ECA010 /* Muli-SemiBold.ttf */; };
+		894795522B27E36F00ECA010 /* Muli.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8947954D2B27DDD900ECA010 /* Muli.ttf */; };
+		894795552B27E55F00ECA010 /* BFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894795542B27E55F00ECA010 /* BFonts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +53,8 @@
 		8947954C2B27DDD900ECA010 /* Muli-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Bold.ttf"; sourceTree = "<group>"; };
 		8947954D2B27DDD900ECA010 /* Muli.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Muli.ttf; sourceTree = "<group>"; };
 		8947954E2B27DDD900ECA010 /* Muli-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-SemiBold.ttf"; sourceTree = "<group>"; };
+		894795532B27E4D100ECA010 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		894795542B27E55F00ECA010 /* BFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFonts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +105,7 @@
 		8947951B2B27C2E700ECA010 /* Buds */ = {
 			isa = PBXGroup;
 			children = (
+				894795532B27E4D100ECA010 /* Info.plist */,
 				894795462B27C43F00ECA010 /* Ultils */,
 				8947951C2B27C2E700ECA010 /* BudsApp.swift */,
 				8947951E2B27C2E700ECA010 /* ContentView.swift */,
@@ -135,6 +143,7 @@
 		894795462B27C43F00ECA010 /* Ultils */ = {
 			isa = PBXGroup;
 			children = (
+				894795542B27E55F00ECA010 /* BFonts.swift */,
 			);
 			path = Ultils;
 			sourceTree = "<group>";
@@ -264,7 +273,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				894795242B27C2E800ECA010 /* Preview Assets.xcassets in Resources */,
+				8947954F2B27E36F00ECA010 /* Muli-Light.ttf in Resources */,
+				894795502B27E36F00ECA010 /* Muli-Bold.ttf in Resources */,
+				894795522B27E36F00ECA010 /* Muli.ttf in Resources */,
 				894795212B27C2E800ECA010 /* Assets.xcassets in Resources */,
+				894795512B27E36F00ECA010 /* Muli-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8947951F2B27C2E700ECA010 /* ContentView.swift in Sources */,
+				894795552B27E55F00ECA010 /* BFonts.swift in Sources */,
 				8947951D2B27C2E700ECA010 /* BudsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -457,6 +471,7 @@
 				DEVELOPMENT_TEAM = C7CDTC5F99;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Buds/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -486,6 +501,7 @@
 				DEVELOPMENT_TEAM = C7CDTC5F99;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Buds/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -13,7 +13,9 @@ struct ContentView: View {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
-			Text("Hello, world!").underline(color: .budsRed)
+			Text("Hello, world!")
+				.font(.customFont(.muliLight, size: 18))
+				.underline(color: .budsRed)
         }
         .padding()
 
