@@ -72,7 +72,6 @@ struct ButtonsView: View {
 	}
 }
 
-
 #Preview {
 	ButtonsView()
 }
