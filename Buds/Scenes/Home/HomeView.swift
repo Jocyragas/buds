@@ -1,9 +1,13 @@
 import SwiftUI
 
 struct HomeView: View {
+	init() {
+//	   UITabBar.appearance().backgroundColor = UIColor.white
+	 }
+	
     var body: some View {
 		TabView {
-			SearchView()
+			ContentView()
 				.tabItem {
 					Image.magnifyingGlass
 					Text("Search")
@@ -27,6 +31,7 @@ struct HomeView: View {
 					Text("Profile")
 				}
 		}.accentColor(.black)
+		
     }
 }
 
