@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89010D842B2DF6C100F708DA /* headerSheetTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89010D832B2DF6C100F708DA /* headerSheetTypes.swift */; };
 		8947951D2B27C2E700ECA010 /* BudsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8947951C2B27C2E700ECA010 /* BudsApp.swift */; };
 		894795212B27C2E800ECA010 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 894795202B27C2E800ECA010 /* Assets.xcassets */; };
 		894795242B27C2E800ECA010 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 894795232B27C2E800ECA010 /* Preview Assets.xcassets */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		89010D832B2DF6C100F708DA /* headerSheetTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = headerSheetTypes.swift; sourceTree = "<group>"; };
 		894795192B27C2E700ECA010 /* Buds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Buds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8947951C2B27C2E700ECA010 /* BudsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudsApp.swift; sourceTree = "<group>"; };
 		894795202B27C2E800ECA010 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -92,6 +94,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		89010D822B2DF6A800F708DA /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				89010D832B2DF6C100F708DA /* headerSheetTypes.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		894795102B27C2E700ECA010 = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +163,7 @@
 		894795462B27C43F00ECA010 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				89010D822B2DF6A800F708DA /* Enums */,
 				899447F72B288046001B0567 /* BButtons.swift */,
 				899448052B2BAFFB001B0567 /* BBottomSheet.swift */,
 			);
@@ -364,6 +375,7 @@
 				899447FE2B291E75001B0567 /* HomeView.swift in Sources */,
 				8947951D2B27C2E700ECA010 /* BudsApp.swift in Sources */,
 				89F2041A2B2CF96B0028B511 /* View+Extensions.swift in Sources */,
+				89010D842B2DF6C100F708DA /* headerSheetTypes.swift in Sources */,
 				899448062B2BAFFB001B0567 /* BBottomSheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
