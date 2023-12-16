@@ -2,7 +2,7 @@ import SwiftUI
 
 struct HomeView: View {
 	init() {
-//	   UITabBar.appearance().backgroundColor = UIColor.white
+	   UITabBar.appearance().backgroundColor = UIColor.white
 	 }
 	
     var body: some View {

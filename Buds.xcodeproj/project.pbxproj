@@ -17,12 +17,13 @@
 		894795502B27E36F00ECA010 /* Muli-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8947954C2B27DDD900ECA010 /* Muli-Bold.ttf */; };
 		894795512B27E36F00ECA010 /* Muli-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8947954E2B27DDD900ECA010 /* Muli-SemiBold.ttf */; };
 		894795522B27E36F00ECA010 /* Muli.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8947954D2B27DDD900ECA010 /* Muli.ttf */; };
-		894795552B27E55F00ECA010 /* BFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894795542B27E55F00ECA010 /* BFonts.swift */; };
+		894795552B27E55F00ECA010 /* Font+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894795542B27E55F00ECA010 /* Font+Extentions.swift */; };
 		899447F82B288046001B0567 /* BButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899447F72B288046001B0567 /* BButtons.swift */; };
 		899447FE2B291E75001B0567 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899447FD2B291E75001B0567 /* HomeView.swift */; };
-		899448002B291F95001B0567 /* BImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899447FF2B291F95001B0567 /* BImages.swift */; };
+		899448002B291F95001B0567 /* Image+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899447FF2B291F95001B0567 /* Image+Extensions.swift */; };
 		899448032B292F06001B0567 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899448022B292F06001B0567 /* SearchView.swift */; };
 		899448062B2BAFFB001B0567 /* BBottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899448052B2BAFFB001B0567 /* BBottomSheet.swift */; };
+		89F2041A2B2CF96B0028B511 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F204192B2CF96B0028B511 /* View+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,12 +58,13 @@
 		8947954D2B27DDD900ECA010 /* Muli.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Muli.ttf; sourceTree = "<group>"; };
 		8947954E2B27DDD900ECA010 /* Muli-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-SemiBold.ttf"; sourceTree = "<group>"; };
 		894795532B27E4D100ECA010 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		894795542B27E55F00ECA010 /* BFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFonts.swift; sourceTree = "<group>"; };
+		894795542B27E55F00ECA010 /* Font+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extentions.swift"; sourceTree = "<group>"; };
 		899447F72B288046001B0567 /* BButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BButtons.swift; sourceTree = "<group>"; };
 		899447FD2B291E75001B0567 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		899447FF2B291F95001B0567 /* BImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BImages.swift; sourceTree = "<group>"; };
+		899447FF2B291F95001B0567 /* Image+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extensions.swift"; sourceTree = "<group>"; };
 		899448022B292F06001B0567 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		899448052B2BAFFB001B0567 /* BBottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBottomSheet.swift; sourceTree = "<group>"; };
+		89F204192B2CF96B0028B511 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,11 +115,11 @@
 		8947951B2B27C2E700ECA010 /* Buds */ = {
 			isa = PBXGroup;
 			children = (
+				89F204182B2CF9350028B511 /* Core */,
 				894795532B27E4D100ECA010 /* Info.plist */,
 				8947951C2B27C2E700ECA010 /* BudsApp.swift */,
 				899447F92B291399001B0567 /* Scenes */,
-				894795462B27C43F00ECA010 /* Components */,
-				894795492B27DD9E00ECA010 /* Files */,
+				894795492B27DD9E00ECA010 /* Resources */,
 				894795222B27C2E800ECA010 /* Preview Content */,
 			);
 			path = Buds;
@@ -151,21 +153,19 @@
 		894795462B27C43F00ECA010 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				894795542B27E55F00ECA010 /* BFonts.swift */,
 				899447F72B288046001B0567 /* BButtons.swift */,
-				899447FF2B291F95001B0567 /* BImages.swift */,
 				899448052B2BAFFB001B0567 /* BBottomSheet.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
 		};
-		894795492B27DD9E00ECA010 /* Files */ = {
+		894795492B27DD9E00ECA010 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				8947954A2B27DDB400ECA010 /* Fonts */,
 				894795202B27C2E800ECA010 /* Assets.xcassets */,
 			);
-			path = Files;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		8947954A2B27DDB400ECA010 /* Fonts */ = {
@@ -202,6 +202,25 @@
 				899448022B292F06001B0567 /* SearchView.swift */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		89F204172B2CF9290028B511 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				894795542B27E55F00ECA010 /* Font+Extentions.swift */,
+				899447FF2B291F95001B0567 /* Image+Extensions.swift */,
+				89F204192B2CF96B0028B511 /* View+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		89F204182B2CF9350028B511 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				89F204172B2CF9290028B511 /* Extensions */,
+				894795462B27C43F00ECA010 /* Components */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,12 +357,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				899448002B291F95001B0567 /* BImages.swift in Sources */,
-				894795552B27E55F00ECA010 /* BFonts.swift in Sources */,
+				899448002B291F95001B0567 /* Image+Extensions.swift in Sources */,
+				894795552B27E55F00ECA010 /* Font+Extentions.swift in Sources */,
 				899447F82B288046001B0567 /* BButtons.swift in Sources */,
 				899448032B292F06001B0567 /* SearchView.swift in Sources */,
 				899447FE2B291E75001B0567 /* HomeView.swift in Sources */,
 				8947951D2B27C2E700ECA010 /* BudsApp.swift in Sources */,
+				89F2041A2B2CF96B0028B511 /* View+Extensions.swift in Sources */,
 				899448062B2BAFFB001B0567 /* BBottomSheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
