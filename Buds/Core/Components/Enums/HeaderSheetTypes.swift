@@ -1,4 +1,4 @@
-enum headerSheetTypes {
+enum HeaderSheetTypes {
 	
 	case grayBarTitleCentered
 	case grayBarTitleLeft

@@ -1,9 +1,9 @@
 import SwiftUI
 
-struct BottomSheetView<Content: View>: View  {
+struct BBottomSheetView<Content: View>: View  {
 	
 	@Binding var title: String
-	@Binding var headerSheetType: headerSheetTypes
+	@Binding var headerSheetType: HeaderSheetTypes
 	@State private var contentMaxHeight: CGFloat = 0
 	private let extraHeightLimits: CGFloat = 20
 	@State private var contentHeight: CGFloat = 0
@@ -14,7 +14,7 @@ struct BottomSheetView<Content: View>: View  {
 	
 	
 	init(bottomSheetInitialHeight: CGFloat,
-		 headerSheetType: Binding<headerSheetTypes>,
+		 headerSheetType: Binding<HeaderSheetTypes>,
 		 title: Binding<String>,
 		 snapPoints: [CGFloat]? = nil,
 		 @ViewBuilder content: () -> Content){
@@ -43,7 +43,7 @@ struct BottomSheetView<Content: View>: View  {
 						} else {
 							HStack {
 								Spacer().frame(width: 34)
-								Text("Arriving in 7 mins")
+								Text(title)
 									.font(.customFont(.muliBold, size: 20))
 								Spacer()
 							}
@@ -118,7 +118,7 @@ struct BottomSheetView<Content: View>: View  {
 struct ContentView: View {
 	private var bottomSheetHeight: CGFloat = 300
 	@State var title = "test"
-	@State var bottomSheetType = headerSheetTypes.grayBarTitleCentered
+	@State var bottomSheetType = HeaderSheetTypes.grayBarTitleCentered
 	let snapPoints: [CGFloat] = [200, 1200]
 	
 	var body: some View {
@@ -131,7 +131,7 @@ struct ContentView: View {
 				Spacer()
 			}.frame(width: .infinity, height: .infinity)
 			
-			BottomSheetView(
+			BBottomSheetView(
 				bottomSheetInitialHeight: bottomSheetHeight,
 				headerSheetType: $bottomSheetType,
 				title: $title, snapPoints: snapPoints

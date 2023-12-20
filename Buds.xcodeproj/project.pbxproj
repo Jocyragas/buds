@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		89010D842B2DF6C100F708DA /* headerSheetTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89010D832B2DF6C100F708DA /* headerSheetTypes.swift */; };
+		89010D842B2DF6C100F708DA /* HeaderSheetTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89010D832B2DF6C100F708DA /* HeaderSheetTypes.swift */; };
+		89010D862B324CE900F708DA /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89010D852B324CE900F708DA /* SearchInteractor.swift */; };
+		89010D882B3250F100F708DA /* SearchContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89010D872B3250F100F708DA /* SearchContracts.swift */; };
+		89010D8A2B32663500F708DA /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89010D892B32663500F708DA /* SearchPresenter.swift */; };
+		89010D8D2B32723B00F708DA /* BViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89010D8C2B32723B00F708DA /* BViewProtocol.swift */; };
 		8947951D2B27C2E700ECA010 /* BudsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8947951C2B27C2E700ECA010 /* BudsApp.swift */; };
 		894795212B27C2E800ECA010 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 894795202B27C2E800ECA010 /* Assets.xcassets */; };
 		894795242B27C2E800ECA010 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 894795232B27C2E800ECA010 /* Preview Assets.xcassets */; };
@@ -45,7 +49,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		89010D832B2DF6C100F708DA /* headerSheetTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = headerSheetTypes.swift; sourceTree = "<group>"; };
+		89010D832B2DF6C100F708DA /* HeaderSheetTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSheetTypes.swift; sourceTree = "<group>"; };
+		89010D852B324CE900F708DA /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
+		89010D872B3250F100F708DA /* SearchContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchContracts.swift; sourceTree = "<group>"; };
+		89010D892B32663500F708DA /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
+		89010D8C2B32723B00F708DA /* BViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BViewProtocol.swift; sourceTree = "<group>"; };
 		894795192B27C2E700ECA010 /* Buds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Buds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8947951C2B27C2E700ECA010 /* BudsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudsApp.swift; sourceTree = "<group>"; };
 		894795202B27C2E800ECA010 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -97,9 +105,17 @@
 		89010D822B2DF6A800F708DA /* Enums */ = {
 			isa = PBXGroup;
 			children = (
-				89010D832B2DF6C100F708DA /* headerSheetTypes.swift */,
+				89010D832B2DF6C100F708DA /* HeaderSheetTypes.swift */,
 			);
 			path = Enums;
+			sourceTree = "<group>";
+		};
+		89010D8B2B32722C00F708DA /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				89010D8C2B32723B00F708DA /* BViewProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		894795102B27C2E700ECA010 = {
@@ -193,8 +209,8 @@
 		899447F92B291399001B0567 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				899448012B292EEB001B0567 /* Search */,
 				899447FA2B291E19001B0567 /* Home */,
+				899448012B292EEB001B0567 /* Search */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -211,6 +227,9 @@
 			isa = PBXGroup;
 			children = (
 				899448022B292F06001B0567 /* SearchView.swift */,
+				89010D852B324CE900F708DA /* SearchInteractor.swift */,
+				89010D872B3250F100F708DA /* SearchContracts.swift */,
+				89010D892B32663500F708DA /* SearchPresenter.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -228,6 +247,7 @@
 		89F204182B2CF9350028B511 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				89010D8B2B32722C00F708DA /* Protocols */,
 				89F204172B2CF9290028B511 /* Extensions */,
 				894795462B27C43F00ECA010 /* Components */,
 			);
@@ -368,15 +388,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89010D8D2B32723B00F708DA /* BViewProtocol.swift in Sources */,
 				899448002B291F95001B0567 /* Image+Extensions.swift in Sources */,
 				894795552B27E55F00ECA010 /* Font+Extentions.swift in Sources */,
 				899447F82B288046001B0567 /* BButtons.swift in Sources */,
 				899448032B292F06001B0567 /* SearchView.swift in Sources */,
+				89010D882B3250F100F708DA /* SearchContracts.swift in Sources */,
+				89010D862B324CE900F708DA /* SearchInteractor.swift in Sources */,
 				899447FE2B291E75001B0567 /* HomeView.swift in Sources */,
 				8947951D2B27C2E700ECA010 /* BudsApp.swift in Sources */,
 				89F2041A2B2CF96B0028B511 /* View+Extensions.swift in Sources */,
-				89010D842B2DF6C100F708DA /* headerSheetTypes.swift in Sources */,
+				89010D842B2DF6C100F708DA /* HeaderSheetTypes.swift in Sources */,
 				899448062B2BAFFB001B0567 /* BBottomSheet.swift in Sources */,
+				89010D8A2B32663500F708DA /* SearchPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
