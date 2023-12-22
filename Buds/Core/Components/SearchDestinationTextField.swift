@@ -15,15 +15,6 @@ struct SimpleDestinationTextField: View {
 				.foregroundColor(.bPlaceholderGray)
 				.font(.customFont(.muliLight, size: 16))
 				.disabled(true)
-
-			if !searchText.isEmpty {
-				Button(action: {
-					searchText = ""
-				}) {
-					Image(systemName: "xmark.circle.fill")
-						.foregroundColor(.gray)
-				}
-			}
 		}
 		.padding(.all, 20)
 		.background()

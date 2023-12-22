@@ -43,7 +43,10 @@ struct SearchView<Presenter: SearchPresenterProtocol>: View {
 				VStack {
 					SimpleDestinationTextField(searchText: $searchText).padding(.horizontal, 16)
 					List(items, id: \.self) { item in
-						  Text(item)
+						  DestinationTableCell(
+							title: "Village",
+							subtitle: "3400 Poly Vista, Pomona"
+						  )
 					}
 				}
 			}
