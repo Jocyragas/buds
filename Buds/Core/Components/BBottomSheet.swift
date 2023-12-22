@@ -4,7 +4,6 @@ struct BBottomSheetView<Content: View>: View  {
 	
 	@Binding var title: String
 	@Binding var headerSheetType: HeaderSheetTypes
-	@State private var contentMaxHeight: CGFloat = 0
 	private let extraHeightLimits: CGFloat = 20
 	@State private var contentHeight: CGFloat = 0
 	@State var bottomSheetHeight: CGFloat = 100
@@ -73,7 +72,10 @@ struct BBottomSheetView<Content: View>: View  {
 									maxScreenHeight: maxScreenHeight,
 									hasExtraValues: false
 								)
-								bottomSheetHeight = snapToClosestIfExists(height)
+								bottomSheetHeight = snapToClosestIfExists(
+									height,
+									maxScreenHeight: maxScreenHeight
+								)
 							}
 						}
 				)
@@ -95,32 +97,32 @@ struct BBottomSheetView<Content: View>: View  {
 	
 	private func calculateHeight(translation: CGFloat, maxScreenHeight: CGFloat, hasExtraValues: Bool) -> CGFloat {
 		let extraLimits = hasExtraValues ? extraHeightLimits : 0
-		contentMaxHeight = self.contentHeight > maxScreenHeight ? maxScreenHeight : self.contentHeight
+		let maxAvailableHight = min(maxScreenHeight, snapPoints?.max() ?? .infinity)
 		var proposedHeight = bottomSheetHeight - translation
-		proposedHeight = min(proposedHeight, contentMaxHeight + extraLimits)
+		proposedHeight = min(proposedHeight, maxAvailableHight + extraLimits)
 		proposedHeight = max(proposedHeight, minimumHeight - extraLimits)
 		return proposedHeight
 	}
 	
 	// Function to find the closest snap point
-	private func snapToClosestIfExists(_ height: CGFloat) -> CGFloat {
+	private func snapToClosestIfExists(_ height: CGFloat, maxScreenHeight: CGFloat) -> CGFloat {
 		guard let snapPoints, !snapPoints.isEmpty else { return height}
-		let maxSnapPoint = (snapPoints.max() ?? .infinity) > contentMaxHeight ? contentMaxHeight : snapPoints.max()
+		let maxSnapPoint = (snapPoints.max() ?? .infinity) > maxScreenHeight ? maxScreenHeight : snapPoints.max()
 		var newSnapPoints = snapPoints
 		newSnapPoints.removeLast()
 		newSnapPoints.append(maxSnapPoint ?? .infinity)
-		var closest = newSnapPoints.min(by: { abs($0 - height) < abs($1 - height) })
-		closest = min(closest!, height)
+		let closest = newSnapPoints.min(by: { abs($0 - height) < abs($1 - height) })
 		return closest ?? height
 	}
 }
 
 struct ContentView: View {
-	private var bottomSheetHeight: CGFloat = 300
+	private var bottomSheetHeight: CGFloat = 0
 	@State var title = "test"
 	@State var bottomSheetType = HeaderSheetTypes.grayBarTitleCentered
-	let snapPoints: [CGFloat] = [200, 1200]
-	
+	let snapPoints: [CGFloat] = [40, 1300]
+	let items = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5"]
+
 	var body: some View {
 		ZStack(alignment: .bottom) {
 			VStack {
@@ -134,12 +136,11 @@ struct ContentView: View {
 			BBottomSheetView(
 				bottomSheetInitialHeight: bottomSheetHeight,
 				headerSheetType: $bottomSheetType,
-				title: $title, snapPoints: snapPoints
+				title: $title, 
+				snapPoints: nil
 			) {
-				VStack(spacing:0) {
-					Color.white.frame(width: 400, height: 500)
-					Color.red.frame(width: 400, height: 3)
-					Spacer().frame(height: 50)
+				List(items, id: \.self) { item in
+					  Text(item)
 				}
 			}
 		}

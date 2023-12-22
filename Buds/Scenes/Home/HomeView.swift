@@ -7,7 +7,7 @@ struct HomeView: View {
 	
     var body: some View {
 		TabView {
-			ContentView()
+			SearchView<SearchPresenter>.create()
 				.tabItem {
 					Image.magnifyingGlass
 					Text("Search")

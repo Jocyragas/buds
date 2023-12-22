@@ -28,6 +28,7 @@
 		899448002B291F95001B0567 /* Image+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899447FF2B291F95001B0567 /* Image+Extensions.swift */; };
 		899448032B292F06001B0567 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899448022B292F06001B0567 /* SearchView.swift */; };
 		899448062B2BAFFB001B0567 /* BBottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899448052B2BAFFB001B0567 /* BBottomSheet.swift */; };
+		89ECEB312B339A5300A00F54 /* SearchDestinationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89ECEB302B339A5300A00F54 /* SearchDestinationTextField.swift */; };
 		89F2041A2B2CF96B0028B511 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F204192B2CF96B0028B511 /* View+Extensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,7 @@
 		899447FF2B291F95001B0567 /* Image+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extensions.swift"; sourceTree = "<group>"; };
 		899448022B292F06001B0567 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		899448052B2BAFFB001B0567 /* BBottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBottomSheet.swift; sourceTree = "<group>"; };
+		89ECEB302B339A5300A00F54 /* SearchDestinationTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDestinationTextField.swift; sourceTree = "<group>"; };
 		89F204192B2CF96B0028B511 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -182,6 +184,7 @@
 				89010D822B2DF6A800F708DA /* Enums */,
 				899447F72B288046001B0567 /* BButtons.swift */,
 				899448052B2BAFFB001B0567 /* BBottomSheet.swift */,
+				89ECEB302B339A5300A00F54 /* SearchDestinationTextField.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 				89F2041A2B2CF96B0028B511 /* View+Extensions.swift in Sources */,
 				89010D842B2DF6C100F708DA /* HeaderSheetTypes.swift in Sources */,
 				899448062B2BAFFB001B0567 /* BBottomSheet.swift in Sources */,
+				89ECEB312B339A5300A00F54 /* SearchDestinationTextField.swift in Sources */,
 				89010D8A2B32663500F708DA /* SearchPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

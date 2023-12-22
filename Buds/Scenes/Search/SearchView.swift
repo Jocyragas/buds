@@ -16,9 +16,12 @@ extension SearchView: BViewProtocol where Presenter: SearchPresenterProtocol {
 }
 
 struct SearchView<Presenter: SearchPresenterProtocol>: View {
+	@State private var searchText: String = ""
 	@ObservedObject private var presenter: Presenter
 	private let interactor: SearchInteractorProtocol
 	let snapPoints: [CGFloat] = [142, 256, 1200]
+	let items = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5"]
+
 	
 	init(presenter: Presenter, interactor: SearchInteractorProtocol) {
 		self.presenter = presenter
@@ -32,14 +35,17 @@ struct SearchView<Presenter: SearchPresenterProtocol>: View {
 				Marker("Parking", coordinate: .parking)
 			}.mapStyle(.standard)
 			BBottomSheetView(
-				bottomSheetInitialHeight: 100,
+				bottomSheetInitialHeight: 500,
 				headerSheetType: $presenter.bottomSheetType,
 				title: $presenter.title,
 				snapPoints: snapPoints
 			) {
-				Button("clique here"){
-					interactor.searchPlace(for: "dsadasgfag")
-				}.buttonStyle(.primaryButton).frame(width: 300, height: 300)
+				VStack {
+					SimpleDestinationTextField(searchText: $searchText).padding(.horizontal, 16)
+					List(items, id: \.self) { item in
+						  Text(item)
+					}
+				}
 			}
 		}
 	}
